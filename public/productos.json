@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Remera Manga Corta Urbana",
+    "price": 45000,
+    "categoria": "Hombres",
+    "image": "https://i.ibb.co/TB6V1x1R/imagen.jpg"
+  },
+  
+  {
+    "id": 2,
+    "title": "Remera Elegante Lisa",
+    "price": 31000,
+    "categoria": "Hombres",
+    "image": "https://i.ibb.co/mCzvDWZ2/remera.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Buzo Bebe ",
+    "price": 25000,
+    "categoria": "Niños",
+    "image": "https://i.postimg.cc/WztKKHVw/Buzobebe.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Conjunto Niño",
+    "price": 18000,
+    "categoria": "Niños",
+    "image": "https://i.postimg.cc/nrP8htTV/conjuntobebe.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Campera Deportiva de Mujer",
+    "price": 55000,
+    "categoria": "Mujeres",
+    "image": "https://i.ibb.co/S4sqPMhc/campera.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Tapado Elegante",
+    "price": 65000,
+    "categoria": "Mujeres",
+    "quantity": 1,
+    "image": "https://i.postimg.cc/w3KLh1j6/Tapado.jpg"
+  }
+]

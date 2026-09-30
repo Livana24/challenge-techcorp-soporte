@@ -1,0 +1,75 @@
+/* Tarjeta principal del producto */
+.card {
+  width: 260px;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  overflow: hidden; /* Esto es clave: corta todo lo que sobresalga de la card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor estricto para la imagen */
+.imageContainer {
+  width: 100%;
+  height: 200px; /* Define una altura fija y uniforme para todas las fotos */
+  background-color: #f8f9fa;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajusta la imagen para que llene el espacio sin deformarse */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta sutilmente la imagen para que encaje perfecto */
+}
+
+/* Contenedor de textos y botones */
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Estilo para el botón / enlace "Ver Detalle" */
+.button {
+  display: inline-block;
+  text-align: center;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}

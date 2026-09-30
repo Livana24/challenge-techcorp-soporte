@@ -1,0 +1,231 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #d3d4d8;
+  font-family: sans-serif;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- TRUCO INFALIBLE PARA ANCHO TOTAL DE PUNTA A PUNTA --- */
+.header, .hero-section, .footer {
+  width: 100vw !important;
+  max-width:  100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  box-sizing: border-box !important;
+}
+
+/* --- HEADER / NAV --- */
+.header {
+  background-color: #caced3;
+  color: #ffffff;
+  padding: 1rem 5% !important; /* Usando el padding adaptado del truco */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #374151;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoIcon {
+  font-size: 1.75rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: #1e53af;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartButton {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+
+.cartButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* --- HERO SECTION / BANNER --- */
+.hero-section {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0 !important; /* Clave para eliminar las curvas */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.hero-section h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #1f4694;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* --- CONTENEDOR PARA PRODUCTOS (Centrado y con límite) --- */
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background-color: #1a202c;
+  color: #e2e8f0;
+  padding: 40px 5% !important; /* Usando el padding adaptado del truco */
+  margin-top: 50px;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #fff;
+  border-bottom: 2px solid #3182ce;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.column p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #cbd5e0;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linksList li {
+  margin-bottom: 8px;
+}
+
+.linksList a {
+  color: #90cdf4;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.linksList a:hover {
+  text-decoration: underline;
+}
+
+/* --- TARJETAS DE PRODUCTOS (Corregidas) --- */
+.card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita barras de desplazamiento horizontal por los anchos del 100vw */
+}

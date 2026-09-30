@@ -1,0 +1,21 @@
+/* --- Contenedor General (Ocupa el 100% de la pantalla sin encerrar nada) --- */
+.rootContainer {
+  width: 100% !important;
+  max-width: 100% !important; /* Evita que se encierre */
+  margin: 0 !important;        /* Elimina cualquier centrado forzado */
+  padding: 0 !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Contenido Principal (Este SÍ se limita y se centra para los productos) --- */
+.mainContent {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
