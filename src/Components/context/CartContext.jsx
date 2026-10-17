@@ -95,7 +95,7 @@ export const CartProvider = ({ children }) => {
       addToCart, 
       addItem, 
       removeFromCart, 
-      clearCart,
+      vaciarCarrito: clearCart,
       incrementarCantidad,
       decrementarCantidad
     }}>

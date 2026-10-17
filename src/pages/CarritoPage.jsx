@@ -90,7 +90,7 @@ export const CarritoPage = () => {
                   </button>
                 </div>
 
-                <div>
+               {/*<div>
                   <p style={{ margin: '0 0 5px 0', color: '#059669', fontWeight: 'bold' }}>
                     Subtotal: {formatCurrency(subtotal)}
                   </p>
@@ -108,7 +108,7 @@ export const CarritoPage = () => {
                   >
                     Eliminar
                   </button>
-                </div>
+                </div>*/}
               </div>
 
             </div>
