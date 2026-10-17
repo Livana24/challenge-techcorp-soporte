@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { useCart } from "../Components/context/CartContext";
+import { useCarrito } from "../Components/context/CartContext";
 import { formatCurrency } from "../utils/formatCurrency";
 import styles from "./ProductoDetallePage.module.css";
 
 export const ProductoDetallePage = () => {
   const { id } = useParams(); // Captura el ID del producto desde la URL (ej: /producto/3)
-  const { addToCart } = useCart();
+  const { addToCart } = useCarrito();
   
   const [producto, setProducto] = useState(null);
   const [loading, setLoading] = useState(true);

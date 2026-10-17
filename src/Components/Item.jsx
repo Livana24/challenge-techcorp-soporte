@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './Item.module.css';
 import { Link } from 'react-router-dom';
-import { useCart } from './context/CartContext'; // Asegúrate de ajustar la ruta si es necesario
+import { useCarrito } from './context/CartContext'; // Asegúrate de ajustar la ruta si es necesario
 
 export const Item = ({ producto }) => {
   const { id, title, price, image } = producto;
-  const { addItem } = useCart(); // Extraemos la función para agregar al carrito
+  const { addToCart } = useCarrito(); // Extraemos la función para agregar al carrito
 
   return (
     <div className={styles.card}>
@@ -17,7 +17,7 @@ export const Item = ({ producto }) => {
       {/* Contenido de la tarjeta */}
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.price}>$ {price.toLocaleString()}</p>
+        <p className={styles.price}>$ {Number(price || 0).toLocaleString}</p>
         
         {/* Acciones: Botón de Carrito + Favorito */}
         <div className={styles.actionsContainer}>
