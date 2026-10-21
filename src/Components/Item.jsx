@@ -17,7 +17,7 @@ export const Item = ({ producto }) => {
       {/* Contenido de la tarjeta */}
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.price}>$ {Number(price || 0).toLocaleString}</p>
+        <p className={styles.price}>$ {Number(price || 0).toLocaleString ()}</p>
         
         {/* Acciones: Botón de Carrito + Favorito */}
         <div className={styles.actionsContainer}>
