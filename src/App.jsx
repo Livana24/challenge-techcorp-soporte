@@ -10,7 +10,7 @@ import { ProductoDetallePage } from "./pages/ProductoDetallePage";
 function App() {
   return (
     <CartProvider>
-     <Router>
+     
         {/* El menú superior abarca todo el ancho */}
         <Nav />
 
@@ -24,7 +24,7 @@ function App() {
 
         {/* El pie de página abarca todo el ancho */}
         <Footer />
-      </Router>
+      
     </CartProvider>
       
     
