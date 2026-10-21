@@ -94,7 +94,7 @@ export const CartProvider = ({ children }) => {
       carrito: cart, // Alias 'carrito' por si alguna página lo usa en español
       addToCart, 
       addItem, 
-      removeFromCart, 
+       eliminarDelCarrito :removeFromCart, 
       vaciarCarrito: clearCart,
       incrementarCantidad,
       decrementarCantidad
