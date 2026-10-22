@@ -6,12 +6,12 @@ import { ProductosPage } from "./pages/ProductosPage";
 import { CarritoPage } from "./pages/CarritoPage";
 import { CartProvider } from "./Components/context/CartContext";
 import { ProductoDetallePage } from "./pages/ProductoDetallePage";
-
+import Productos from './Components/Productos';
 function App() {
   return (
     <CartProvider>
      
-        {/* El menú superior abarca todo el ancho */}
+      {/* El menú superior abarca todo el ancho */}
         <Nav />
 
         {/* Las rutas gestionan las páginas (el componente Home incluye el Banner) */}
@@ -24,6 +24,8 @@ function App() {
 
         {/* El pie de página abarca todo el ancho */}
         <Footer />
+     
+       
       
     </CartProvider>
       

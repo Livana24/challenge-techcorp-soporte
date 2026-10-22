@@ -19,7 +19,6 @@ export const CartProvider = ({ children }) => {
 
   // Función unificada: soporta tanto (item, quantity) como ({ producto, cantidad })
   const addToCart = (param1, param2 = 1) => {
-    // Detectamos si pasaron un objeto tipo { producto, cantidad } o un item directo
     let item, quantity;
     if (param1 && param1.producto) {
       item = param1.producto;
@@ -46,7 +45,7 @@ export const CartProvider = ({ children }) => {
           id: item.id,
           title: item.title || item.name,
           price: precioUnitario,
-          precio: precioUnitario, // Guardamos ambas por si acaso
+          precio: precioUnitario,
           image: item.image || item.img,
           categoria: item.categoria || item.category || 'General',
           quantity: quantity
@@ -71,7 +70,7 @@ export const CartProvider = ({ children }) => {
         .map(item =>
           item.id === id ? { ...item, quantity: item.quantity - 1 } : item
         )
-        .filter(item => item.quantity > 0) // Si llega a 0 se elimina
+        .filter(item => item.quantity > 0)
     );
   };
 
@@ -91,10 +90,10 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider value={{ 
       cart, 
-      carrito: cart, // Alias 'carrito' por si alguna página lo usa en español
+      carrito: cart, 
       addToCart, 
       addItem, 
-       eliminarDelCarrito :removeFromCart, 
+      eliminarDelCarrito: removeFromCart, 
       vaciarCarrito: clearCart,
       incrementarCantidad,
       decrementarCantidad
