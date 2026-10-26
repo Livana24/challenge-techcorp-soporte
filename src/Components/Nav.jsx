@@ -3,6 +3,7 @@ import styles from './Nav.module.css';
 import { useCarrito } from './context/CartContext';
 import React from 'react';
 
+
 export const Nav = () => {
   // Consumimos el carrito desde el contexto
   const { carrito } = useCarrito();
@@ -20,6 +21,9 @@ export const Nav = () => {
           <li>
             <Link to="/productos" className={styles.link}>Productos</Link>
           </li>
+          <li>
+  <Link to="/contacto" className={styles.link}>Contacto</Link>
+</li>
          {/*
           <li>
             <Link to="/carrito" className={styles.link}>Carrito</Link>
