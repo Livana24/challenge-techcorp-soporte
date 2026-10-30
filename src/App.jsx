@@ -6,9 +6,9 @@ import { ProductosPage } from "./pages/ProductosPage";
 import { CarritoPage } from "./pages/CarritoPage";
 import { CartProvider } from "./Components/context/CartContext";
 import { ProductoDetallePage } from "./pages/ProductoDetallePage";
-import Productos from './Components/Productos';
 import Cupon from './Components/Cupon';
 import Contacto from "./Components/Contacto";
+import Panel from "./pages/Panel";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
           <Route path="/producto/:id" element={<ProductoDetallePage />} /> {/* <-- Sintaxis JSX correcta */}
           <Route path="/cupones" element={<Cupon />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/panel" element={<Panel />} />
         </Routes>
 
         {/* El pie de página abarca todo el ancho */}
