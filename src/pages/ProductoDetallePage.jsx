@@ -42,9 +42,13 @@ export const ProductoDetallePage = () => {
 
   return (
     <div className={styles.detailCard}>
-      <div className={styles.imageContainer}>
-        <img src={producto.image} alt={producto.title} className={styles.image} />
-      </div>
+     <div className={styles.imageContainer}>
+  <img 
+    src={producto.image || producto.imagen} 
+    alt={producto.title || producto.nombre} 
+    className={styles.image} 
+  />
+</div>
       
       <div className={styles.infoContainer}>
         <h2>{producto.title}</h2>
