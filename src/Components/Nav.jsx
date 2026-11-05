@@ -25,10 +25,8 @@ export const Nav = () => {
             <Link to="/contacto" className={styles.link}>Contacto</Link>
           </li>
           <li>
-            {/* CORREGIDO: Apunta correctamente a /panel */}
-            <Link to="/panel" className={styles.linkPanel}>Panel</Link>
+            <Link to="/panel" className={styles.link}>Panel</Link>
           </li>
-          
           <li>
             <Link to="/carrito" className={styles.link}>
               <svg
@@ -54,6 +52,9 @@ export const Nav = () => {
                 </span>
               )}
             </Link>
+          </li>
+          <li>
+            <Link to="/login" className={styles.link}>Login</Link>
           </li>
         </ul>
       </nav>

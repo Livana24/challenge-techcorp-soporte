@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-
+import { getAuth } from "firebase/auth"; // <-- Importa getAuth
 // Credenciales que copiaste de la consola de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCxeAhgm5x4t4iq1G3HDbGinMWqAySt9EQ",
