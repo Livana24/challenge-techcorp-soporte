@@ -1,20 +1,34 @@
 import React, { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebaseConfig";
 import { Item } from "./Item";
 import styles from "./ItemListContainer.module.css";
 
 export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/productos.json")
-      .then((res) => res.json())
-      .then((data) => setProductos(data))
-      .catch((error) => console.error("Error al cargar productos:", error));
+    const fetchProductos = async () => {
+      try {
+        const resp = await getDocs(collection(db, "productos"));
+        setProductos(resp.docs.map((d) => ({ ...d.data(), id: d.id })));
+      } catch (error) {
+        console.error("Error al cargar productos:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProductos();
   }, []);
 
   const productosFiltrados = categoriaSeleccionada
-    ? productos.filter((p) => p.categoria.toLowerCase() === categoriaSeleccionada.toLowerCase())
+    ? productos.filter(
+        (p) =>
+          (p.categoria || p.category || "").toLowerCase() ===
+          categoriaSeleccionada.toLowerCase()
+      )
     : productos;
 
   const categorias = ["Hombres", "Mujeres", "Niños"];
@@ -35,7 +49,9 @@ export const ItemListContainer = () => {
             <button
               key={cat}
               className={`${styles.filterBtn} ${categoriaSeleccionada === cat ? styles.active : ""}`}
-              onClick={() => setCategoriaSeleccionada(categoriaSeleccionada === cat ? "" : cat)}
+              onClick={() =>
+                setCategoriaSeleccionada(categoriaSeleccionada === cat ? "" : cat)
+              }
             >
               {cat}
             </button>
@@ -45,7 +61,9 @@ export const ItemListContainer = () => {
 
       {/* Grilla de productos */}
       <div className={styles.grid}>
-        {productosFiltrados.length > 0 ? (
+        {loading ? (
+          <p>Cargando productos...</p>
+        ) : productosFiltrados.length > 0 ? (
           productosFiltrados.map((prod) => <Item key={prod.id} producto={prod} />)
         ) : (
           <p>No hay productos disponibles para esta categoría.</p>

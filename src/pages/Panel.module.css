@@ -69,7 +69,7 @@
   background: #fff;
   border: 1px solid #eaeaea;
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: auto;              /* antes: hidden */
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
@@ -77,16 +77,13 @@
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  table-layout: fixed;           /* nuevo */
 }
-
-.table th {
-  background-color: #fafafa;
-  padding: 1rem;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  color: #666;
-  border-bottom: 1px solid #eaeaea;
-}
+.table th:nth-child(1) { width: 80px; }    /* Imagen */
+.table th:nth-child(3) { width: 130px; }   /* Categoría */
+.table th:nth-child(4) { width: 100px; }   /* Precio */
+.table th:nth-child(5) { width: 200px; }   /* Acciones */
+/* Nombre (columna 2) toma el espacio restante */
 
 .table td {
   padding: 1rem;

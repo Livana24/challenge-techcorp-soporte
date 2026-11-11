@@ -15,6 +15,20 @@
     "image": "https://i.ibb.co/mCzvDWZ2/remera.jpg"
   },
   {
+    "id": 13,
+    "title": "Buzo con Capucha Urbano",
+    "price": 49000,
+    "categoria": "Hombres",
+    "image": "https://pampero.com.ar/wp-content/uploads/2026/03/271203_Pampero_Ecom_1127.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Campera de Cuero Ecológico",
+    "price": 89000,
+    "categoria": "Hombres",
+    "image": "https://tascani.vtexassets.com/arquivos/ids/208745/TASCANI2011_73517.jpg"
+  },
+  {
     "id": 3,
     "title": "Buzo Bebe ",
     "price": 25000,
@@ -27,6 +41,20 @@
     "price": 18000,
     "categoria": "Niños",
     "image": "https://i.postimg.cc/nrP8htTV/conjuntobebe.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Campera Abrigada Infantil",
+    "price": 38000,
+    "categoria": "Niños",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_801987-MLA109307731584_042026-O.webp"
+  },
+  {
+    "id": 16,
+    "title": "Buzo Polar con Cierre Niño",
+    "price": 22000,
+    "categoria": "Niños",
+    "image": "https://acdn-us.mitiendanube.com/stores/001/698/596/products/bz00025-3-391cf2ab0512425c8f17086295516747-640-0.webp"
   },
   {
     "id": 5,
@@ -42,5 +70,49 @@
     "categoria": "Mujeres",
     "quantity": 1,
     "image": "https://i.postimg.cc/w3KLh1j6/Tapado.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Pantalón Wide Leg de Vestir",
+    "price": 46000,
+    "categoria": "Mujeres",
+    "image": "https://img.avellanedaaltoque.com/productos/3443535/1bjb.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Blazer Elegante entallado",
+    "price": 68000,
+    "categoria": "Mujeres",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_801987-MLA109307731584_042026-O.webp"
+  },
+  {
+    "id": 7,
+    "title": "Pantalón Chino Slim",
+    "price": 48000,
+    "categoria": "Hombres",
+    "image": "https://sepiia.com/cdn/shop/files/sepiia-pantalon-chino-hombre-negro-slim-nova-4_f23cf3ee-edb4-450a-9f5e-c810cc2f26a2.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Jean Clásico Oversize",
+    "price": 52000,
+    "categoria": "Hombres",
+    "image": "https://img.avellanedaaltoque.com/productos/3443535/1bjb.jpg"
+  },
+
+  {
+    "id": 11,
+    "title": "Remera Básica Infantil",
+    "price": 15000,
+    "categoria": "Niños",
+    "image": "https://acdn-us.mitiendanube.com/stores/003/351/851/products/whatsapp-image-2022-01-03-at-14-17-09-4bc4e9574b1cf8e2cc16412409373389-640-0.jpeg"
+  },
+  {
+    "id": 12,
+    "title": "Short Deportivo de Niños",
+    "price": 17500,
+    "categoria": "Niños",
+    "image": "https://img.avellanedaaltoque.com/productos/3237897/3jxf.jpg"
   }
+
 ]
